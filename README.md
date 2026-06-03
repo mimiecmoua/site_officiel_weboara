@@ -1,6 +1,6 @@
 # site_officiel_weboara
 
-Site web personnel en développement.
+Site web officiel webOara Consultante en stratégie digitale
 
 ## 🚀 Technologies utilisées
 
@@ -12,7 +12,7 @@ Site web personnel en développement.
 
 - Fenêtres pop-up en JavaScript
 - Effet parallax
-- Design responsive (en cours d’amélioration)
+- Design responsive
 
 ## 🎯 Objectif
 
