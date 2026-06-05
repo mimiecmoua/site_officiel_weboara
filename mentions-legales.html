@@ -4,13 +4,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentions légales - webOara</title>
+    <link rel="icon" type="image/png" href="./img/logo2.png">
+
+  <meta name="description" content="Mentions légales du site webOara." />
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .legal-page {
+      padding: clamp(3rem, 8vw, 6rem) 0;
+    }
+
+    .legal-wrapper {
+      width: min(calc(100% - 2rem), 900px);
+      margin: 0 auto;
+    }
+
+    .legal-card {
+      background: var(--color-surface, #ffffff);
+      border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+      border-radius: var(--radius-xl, 2rem);
+      box-shadow: var(--shadow-md, 0 18px 48px rgba(0,0,0,0.08));
+      padding: clamp(1.5rem, 3vw, 3rem);
+    }
+
+    .legal-page h1 {
+      font-family: var(--font-display, sans-serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .legal-intro {
+      color: var(--color-text-muted, #666);
+      margin-bottom: 2rem;
+      max-width: 65ch;
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-divider, rgba(0,0,0,0.08));
+    }
+
+    .legal-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .legal-section p {
+      margin-bottom: 0.8rem;
+      color: var(--color-text, #222);
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .legal-section li {
+      color: var(--color-text, #222);
+    }
+
+    .legal-label {
+      font-weight: 700;
+    }
+
+    .legal-footer-note {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--color-text-muted, #666);
+    }
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.85rem 1.15rem;
+      border-radius: 999px;
+      border: 1px solid var(--color-border, rgba(0,0,0,0.08));
+      background: var(--color-surface-2, #fff);
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .legal-back:hover {
+      border-color: var(--color-primary, #000);
+      color: var(--color-primary, #000);
+    }
+  </style>
 </head>
 <body>
-  <main class="legal-page container section">
-    <h1>Mentions légales</h1>
-    <p>Texte à compléter…</p>
-    <a href="./index.html">Retour au site</a>
+  <main class="legal-page">
+    <div class="legal-wrapper">
+      <a class="legal-back" href="./index.html">← Retour au site</a>
+
+      <div class="legal-card">
+        <h1>Mentions légales</h1>
+        <p class="legal-intro">
+          Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site webOara l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
+        </p>
+
+        <section class="legal-section">
+          <h2>Édition du site</h2>
+          <p>
+            Le présent site, accessible à l’URL <strong>www.weboara.com</strong> (le « Site »), est édité par :
+          </p>
+          <p>
+            <strong>Émilie Clain</strong>, résidant 11 rue de l'église, 34440 Colombiers, de nationalité française, née le 21/12/1980, immatriculée sous le numéro 98739561300019.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Hébergement</h2>
+          <p>
+            Le Site est hébergé par la société <strong>OVH SAS</strong>, située 2 rue Kellermann - BP 80157 - 59053 Roubaix Cedex 1, contact : 1007.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Directeur de publication</h2>
+          <p>
+            Le Directeur de la publication du Site est <strong>Émilie Clain</strong>.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Nous contacter</h2>
+          <ul>
+            <li><span class="legal-label">Par téléphone :</span> +33 6 58 05 35 86</li>
+            <li><span class="legal-label">Par email :</span> contact@weboara.com</li>
+            <li><span class="legal-label">Par courrier :</span> 11 rue de l'église, 34440 Colombiers</li>
+          </ul>
+        </section>
+
+        <p class="legal-footer-note">
+          Mentions légales générées à partir d’un modèle Legalstart, puis intégrées au site webOara. [file:224]
+        </p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
