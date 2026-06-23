@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REW3L2R79R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-REW3L2R79R');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="webOara — Emilie Clain consultante en stratégie digitale et IA, conçoit des projets web innovants." />
@@ -19,7 +10,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>
+  <!-- Axeptio + Google Analytics conditionnel -->
+<script>
+  void 0 === window._axcb && (window._axcb = []);
+  window._axcb.push(function(sdk) {
+    sdk.on("cookies:complete", function(choices) {
+      if (choices.google_analytics) {
+        var s = document.createElement('script');
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-REW3L2R79R";
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-REW3L2R79R');
+      }
+    });
+  });
+</script>
+<script>
   window.axeptioSettings = {
     clientId: "6a3a44f01d4bd97dd1d55790",
     cookiesVersion: "weboara-fr",
