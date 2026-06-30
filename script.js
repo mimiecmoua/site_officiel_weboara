@@ -16,9 +16,9 @@ const projects = [
   {
     tag: 'IA embarquée • cartographie sémantique',
     title: 'Nautilus exploration',
-    image: './img/nautilus_sit_off.png',
-    description: 'Le projet Nautilus est une carte interactive du voyage imaginé par Jules Verne, enrichie par une IA qui analyse les textes originaux pour générer un “journal de bord vivant”. Elle extrait et structure les événements, espèces et atmosphères du récit pour proposer une lecture immersive et intelligente de l’œuvre.',
-    link: 'https://the-nautilus-exploration.netlify.app/'
+    image: './img/carte_nautilus.png',
+    description: 'Exploration du Nautilus est une carte interactive retraçant les 32 escales du voyage imaginé par Jules Verne dans Vingt mille lieues sous les mers, avec extraits du roman et espèces marines rencontrées à chaque étape. Une IA locale (RAG/Mistral) vient enrichir l\'exploration en générant, pour chaque zone océanique, des fiches sur les découvertes scientifiques du XIXe siècle et leur comparaison avec les connaissances actuelles.',
+    link: 'https://the-nautilus-exploration.netlify.app/',
   },
   {
     tag: 'Sass • analyse prospection',
