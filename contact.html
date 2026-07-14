@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez webOara — Emilie Clain, consultante en stratégie digitale et IA. Décrivez votre projet, je vous recontacte." />
+  <title>Contact — webOara</title>
+  <link rel="icon" type="image/png" href="./img/logo2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Tarteaucitron.js — gestion du consentement cookies -->
+  <script src="https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.17.0/tarteaucitron.js"></script>
+  <script>
+    tarteaucitron.init({
+      "privacyUrl": "cgu.html",
+      "orientation": "bottom",
+      "showIcon": false,
+      "DenyAllCta": true,
+      "AcceptAllCta": true,
+      "highPrivacy": true,
+      "removeCredit": false,
+      "moreInfoLink": true
+    });
+    tarteaucitron.user.googletagmanagerId = 'G-REW3L2R79R';
+    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+  </script>
+  <style>
+    #tarteaucitronRoot { font-family: 'Manrope', sans-serif !important; }
+    #tarteaucitronAlertBig {
+      background: #fff8f4 !important;
+      border-top: 2px solid #ff8c94 !important;
+      color: #3f3538 !important;
+      box-shadow: 0 -18px 48px rgba(88,64,72,0.10) !important;
+    }
+    #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert { color: #3f3538 !important; font-size: 0.9rem !important; }
+    #tarteaucitronAlertBig button#tarteaucitronPersonalize2,
+    #tarteaucitronAlertBig button.tarteaucitronAllow {
+      background: #ff8c94 !important; color: #fff !important; border-radius: 999px !important;
+      font-weight: 600 !important; border: none !important; padding: 0.6rem 1.2rem !important;
+    }
+    #tarteaucitronAlertBig button#tarteaucitronAllDenied2 {
+      background: transparent !important; color: #75686c !important;
+      border: 1px solid rgba(92,76,76,0.2) !important; border-radius: 999px !important;
+      font-weight: 600 !important; padding: 0.6rem 1.2rem !important;
+    }
+    #tarteaucitronAlertBig a { color: #ff8c94 !important; }
+  </style>
+
+  <!-- Styles spécifiques au formulaire (dérivés de tes tokens, compatibles thème sombre) -->
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: start;
+      margin-top: 2rem;
+    }
+    .contact-intro-card { position: sticky; top: 100px; }
+    .contact-facts { display: grid; gap: 0.9rem; margin-top: 1.4rem; }
+    .contact-fact {
+      display: grid; grid-template-columns: auto 1fr; gap: 0.9rem; align-items: start;
+      color: var(--color-text-muted); font-size: var(--text-sm);
+    }
+    .contact-fact::before {
+      content: "✦"; color: var(--color-primary); font-size: 1rem; margin-top: 0.1rem;
+    }
+
+    .contact-form {
+      padding: clamp(1.4rem, 2.5vw, 2rem);
+      border-radius: var(--radius-xl);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-field { margin-bottom: 1.1rem; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label {
+      display: block; font-size: var(--text-sm); font-weight: 600; margin-bottom: 0.4rem;
+    }
+    .form-field label .optional { color: var(--color-text-faint); font-weight: 400; }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-surface-2);
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: var(--text-base);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: var(--color-text-faint); }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent);
+    }
+    .form-field textarea { min-height: 140px; resize: vertical; }
+
+    .form-consent {
+      display: flex; gap: 0.65rem; align-items: flex-start;
+      font-size: var(--text-sm); color: var(--color-text-muted);
+      margin: 0.3rem 0 1.4rem;
+    }
+    .form-consent input { margin-top: 0.2rem; width: 18px; height: 18px; accent-color: var(--color-primary); flex-shrink: 0; }
+    .form-consent a { color: var(--color-primary); text-decoration: underline; }
+
+    /* Honeypot anti-spam : invisible pour les humains, rempli par les bots */
+    .form-hp { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }
+
+    .form-submit-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .form-submit-row .btn[disabled] { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-status {
+      display: none;
+      margin-top: 1.2rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+    }
+    .form-status.is-visible { display: block; }
+    .form-status.success {
+      background: color-mix(in srgb, var(--color-secondary) 28%, var(--color-surface-2));
+      border: 1px solid color-mix(in srgb, var(--color-secondary) 55%, var(--color-border));
+      color: var(--color-text);
+    }
+    .form-status.error {
+      background: color-mix(in srgb, var(--color-primary) 14%, var(--color-surface-2));
+      border: 1px solid color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
+      color: var(--color-text);
+    }
+
+    @media (max-width: 1024px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-intro-card { position: static; }
+    }
+    @media (max-width: 620px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Accueil webOara">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="./img/logo2.png" alt="webOara">
+        </span>
+        <span class="brand-label">
+          <strong>webOara</strong>
+          <span>Emilie Clain • Consultante en stratégie digitale</span>
+        </span>
+      </a>
+
+      <nav>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Ouvrir le menu</span>
+          ☰
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#a-propos">Vision</a>
+          <a href="index.html#projets">Études de cas</a>
+          <a href="index.html#competences">Domaines d’intervention</a>
+          <a href="index.html#parcours">Trajectoire</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer le thème">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" id="contact">
+      <div class="container">
+        <div data-reveal>
+          <span class="section-kicker">Contact • Devis sur demande</span>
+          <h2 class="section-title">Parlons de vos besoins.</h2>
+          <p class="section-copy">
+            Vous avez un besoin ou une idée ? Décrivez votre projet ci-dessous.
+            Je vous recontacte pour clarifier la demande, identifier les pistes possibles
+            et proposer un cadre d’accompagnement adapté — appel de cadrage, consultation ou devis.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="glass-card contact-intro-card" data-reveal>
+            <h3>Comment ça se passe</h3>
+            <div class="contact-facts">
+              <div class="contact-fact">Envoyez une description de votre besoin, même succincte.</div>
+              <div class="contact-fact">Je reviens vers vous par e-mail pour cadrer la demande.</div>
+              <div class="contact-fact">Téléphone sur demande : laissez votre numéro si vous préférez un échange de vive voix.</div>
+              <div class="contact-fact">Les missions font l’objet d’un devis personnalisé.</div>
+            </div>
+          </aside>
+
+          <div data-reveal>
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Web3Forms : remplace la valeur par ta propre Access Key (web3forms.com) -->
+              <input type="hidden" name="access_key" value="e1596747-4911-4ce9-921e-34c50d7d8f09">
+
+              <!-- Sujet de l'e-mail reçu + nom de l'expéditeur affiché -->
+              <input type="hidden" name="from_name" value="webOara — Formulaire de contact">
+
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="name">Nom</label>
+                  <input type="text" id="name" name="name" placeholder="Votre nom" required minlength="2" maxlength="80" autocomplete="name">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="vous@exemple.com" required maxlength="120" autocomplete="email">
+                </div>
+                <div class="form-field">
+                  <label for="phone">Téléphone <span class="optional">— optionnel, si vous souhaitez être rappelé·e</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="06 00 00 00 00" maxlength="20"
+                         pattern="[0-9 +().\-]{6,20}" autocomplete="tel">
+                </div>
+                <div class="form-field">
+                  <label for="subject">Sujet</label>
+                  <input type="text" id="subject" name="subject" placeholder="Ex : cadrage, devis, étude…" required minlength="3" maxlength="120">
+                </div>
+              </div>
+
+              <div class="form-field full">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" placeholder="Bonjour Emilie, je souhaite…" required minlength="10" maxlength="3000"></textarea>
+              </div>
+
+              <label class="form-consent">
+                <input type="checkbox" id="consent" required>
+                <span>J’accepte que mes données soient utilisées uniquement pour répondre à ma demande. Voir les <a href="mentions-legales.html">mentions légales</a>.</span>
+              </label>
+
+              <!-- Honeypot anti-spam : NE PAS supprimer, doit rester vide -->
+              <input type="checkbox" name="botcheck" class="form-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <!--
+                hCaptcha (recommandé) — pour l'activer :
+                1) récupère ta sitekey hCaptcha dans ton dashboard Web3Forms
+                2) décommente le bloc ci-dessous + le <script> hCaptcha en bas de page
+                3) remplace TA_SITEKEY_HCAPTCHA
+                <div class="h-captcha" data-captcha="true" data-sitekey="TA_SITEKEY_HCAPTCHA" style="margin-bottom:1.2rem;"></div>
+              -->
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                  <span id="submit-label">Envoyer le message</span>
+                </button>
+                <a class="btn btn-secondary" href="mailto:contact@weboara.com?subject=Prise%20de%20contact">Ou écrire directement</a>
+              </div>
+
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p>© 2026 webOara - Emilie Clain</p>
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cgu.html">CGU</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Comportement global du site (thème, menu, reveal) -->
+  <script src="script.js" defer></script>
+
+  <!--
+    hCaptcha — décommente si tu actives le captcha ci-dessus :
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  -->
+
+  <!-- Envoi du formulaire via Web3Forms (AJAX, sans quitter la page) -->
+  <script>
+    (() => {
+      // Filet de sécurité : rend visibles les blocs [data-reveal] même si script.js ne les gère pas
+      window.addEventListener('load', () => {
+        document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
+      });
+
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('form-status');
+      const btn = document.getElementById('submit-btn');
+      const label = document.getElementById('submit-label');
+
+      const showStatus = (type, msg) => {
+        statusEl.className = `form-status is-visible ${type}`;
+        statusEl.textContent = msg;
+      };
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Validation navigateur (required, email, pattern, longueurs)
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        btn.disabled = true;
+        label.textContent = 'Envoi en cours…';
+        statusEl.className = 'form-status';
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formData
+          });
+          const result = await response.json();
+
+          if (result.success) {
+            showStatus('success', 'Merci, votre message a bien été envoyé. Je vous recontacte rapidement par e-mail.');
+            form.reset();
+          } else {
+            showStatus('error', `L'envoi n'a pas abouti : ${result.message || 'réessayez dans un instant.'}`);
+          }
+        } catch (err) {
+          showStatus('error', "Connexion impossible pour le moment. Réessayez, ou écrivez-moi directement à contact@weboara.com.");
+        } finally {
+          btn.disabled = false;
+          label.textContent = 'Envoyer le message';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
